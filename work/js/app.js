@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     button.addEventListener('click', function () {
       currentInput += button.getAttribute('data-number');
       updataDisplay(currentInput);
+      updataDisplay(firstOperand + operator + currentInput) //計算式を表示
     });
   });
 
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
         firstOperand = currentInput;
         operator = button.getAttribute('data-operator');
         currentInput = '';
+        updataDisplay(firstOperand + operator) //計算式を表示
       }
     });
   });
